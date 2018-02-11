@@ -1,0 +1,87 @@
+\documentclass[11pt]{article}
+
+\usepackage{datetime}
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{epsfig}
+\usepackage{titlesec}
+
+\newcommand{\handout}[5]{
+  \noindent
+  \begin{center}
+  \framebox{
+    \vbox{
+      \hbox to 5.78in { {\bf 6.437: Inference and 
+    Information } \hfill #2 }
+      \vspace{4mm}
+      \hbox to 5.78in { {\Large \hfill #5  \hfill} }
+      \vspace{2mm}
+      \hbox to 5.78in { {\em #3 \hfill #4} }
+    }
+  }
+  \end{center}
+  \vspace*{4mm}
+}
+
+% For lecture scribe notes
+\newcommand{\lecture}[4]{\handout{#1}{#2}{#3}{Scribe: #4}{Lecture #1}}
+
+% For problem sets
+\newcommand{\pset}[3]{\handout{#1}{#2}{#3}{}{Problem Set #1}}
+
+% Custom text placeholders for:
+% author, date, semester, pset number, and lecture number
+\newcommand{\theauthor}[1]{\def\theauthor{#1}}
+\newcommand{\thedate}[1]{\def\thedate{#1}}
+\newcommand{\thesemester}[1]{\def\thesemester{#1}}
+\newcommand{\thepset}[1]{\def\thepset{#1}}
+\newcommand{\thelecture}[1]{\def\thelecture{#1}}
+
+% Helpful theorem definitions
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{observation}[theorem]{Observation}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{fact}[theorem]{Fact}
+\newtheorem{assumption}[theorem]{Assumption}
+
+% 1-inch margins, from fullpage.sty by H.Partl, Version 2, Dec. 15, 1988.
+\topmargin 0pt
+\advance \topmargin by -\headheight
+\advance \topmargin by -\headsep
+\textheight 8.9in
+\oddsidemargin 0pt
+\evensidemargin \oddsidemargin
+\marginparwidth 0.5in
+\textwidth 6.5in
+
+\parindent 0in
+\parskip 1.5ex
+%\renewcommand{\baselinestretch}{1.25}
+
+% Modify info here:
+\theauthor{Kevin Doherty}
+\newdate{date}{13}{02}{2018}
+\thepset{1}
+\thesemester{Spring}
+
+\thedate{\shortdate\displaydate{date}}
+
+% Custom numbering scheme specific to 6.437
+\titleformat{\section}{\normalfont\LARGE\bfseries}{\thesection}{1em}{Problem \thepset.\thesection}
+
+\begin{document}
+
+\pset{\thepset\ --- \thedate}{\thesemester\ \getdateyear{date}}{\theauthor}
+
+\section{}
+
+%\bibliography{mybib}
+\bibliographystyle{alpha}
+
+\end{document}
